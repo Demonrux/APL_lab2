@@ -8,7 +8,7 @@ df_iris = pd.read_csv('files/IRIS.csv')
 df_science_salary = pd.read_csv('files/Data_Science_Salary_2021_to_2023.csv')
 
 
-def plot_mean_dwt_vs_length():
+def graph_average_dwt_versus_length():
 
     length_bins = np.linspace(df_ships['length'].min(), df_ships['length'].max(), 20)
 
@@ -31,7 +31,7 @@ def plot_mean_dwt_vs_length():
     plt.show()
 
 
-def plot_ship_types_pie():
+def graph_ship_types_pie():
 
     ship_type_counts = df_ships['ship_name'].value_counts()
 
@@ -51,7 +51,7 @@ def plot_ship_types_pie():
     plt.show()
 
 
-def plot_ships_by_built_year():
+def graph_ships_by_built_year():
 
     plt.figure(figsize=(12, 6))
     plt.hist(df_ships['built_year'], bins=30, alpha=0.7, edgecolor='black')
@@ -62,7 +62,7 @@ def plot_ships_by_built_year():
     plt.show()
 
 
-def plot_2d_histogram():
+def graph_2d_histogram():
 
     dwt_bins = np.linspace(df_ships['dwt'].min(), df_ships['dwt'].max(), 21)
 
@@ -78,19 +78,20 @@ def plot_2d_histogram():
     plt.show()
 
 
-def plot_iris_pairplot():
+def graph_iris_pairplot():
 
     seaborn.pairplot(df_iris)
     plt.suptitle('Парная диаграмма для датасета Iris')
     plt.show()
 
 
-def plot_iris_violin():
+def graph_iris_violin():
 
     df_melted = df_iris.melt(id_vars='species',
                         value_vars=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'],
                         var_name='characteristic',
                         value_name='value')
+    print(df_melted)
 
     plt.figure(figsize=(10, 6))
     seaborn.violinplot(data=df_melted, x='characteristic', y='value',
@@ -104,7 +105,7 @@ def plot_iris_violin():
     plt.show()
 
 
-def plot_salary_by_experience():
+def graph_salary_by_experience():
     plt.figure(figsize=(12, 6))
 
     seaborn.violinplot(data=df_science_salary, x='experience_level', y='salary_in_usd')
@@ -117,7 +118,7 @@ def plot_salary_by_experience():
     plt.show()
 
 
-def plot_top_paying_jobs():
+def graph_top_paying_jobs():
 
     top_jobs = df_science_salary.groupby('job_title')['salary_in_usd'].median().nlargest(10)
 
@@ -137,7 +138,7 @@ def plot_top_paying_jobs():
     plt.show()
 
 
-def plot_salary_trends_by_year():
+def graph_salary_trends_by_year():
 
     plt.figure(figsize=(12, 6))
 

@@ -6,40 +6,40 @@ def console_interface():
     commands = {
         '1': {
             'name': '2-D график зависимости средней загрузки от длины',
-            'func': lg.plot_mean_dwt_vs_length
+            'func': lg.graph_average_dwt_versus_length
         },
         '2': {
             'name': 'Распределение кораблей по типам',
-            'func': lg.plot_ship_types_pie
+            'func': lg.graph_ship_types_pie
         },
         '3': {
             'name': 'Гистограмма по годам постройки',
-            'func': lg.plot_ships_by_built_year
+            'func': lg.graph_ships_by_built_year
         },
         '4': {
             'name': '2D гистограмма: годы постройки vs грузоподъемность',
-            'func': lg.plot_2d_histogram
+            'func': lg.graph_2d_histogram
         },
         '5': {
             'name': 'Парная диаграмма для ирисов',
-            'func': lg.plot_iris_pairplot
+            'func': lg.graph_iris_pairplot
         },
         '6': {
             'name': 'Скрипичные диаграммы для ирисов',
-            'func': lg.plot_iris_violin
+            'func': lg.graph_iris_violin
         },
         '7': {
             'name': 'Распределение зарплат по уровням опыта (Experience Level)',
-            'func': lg.plot_salary_by_experience
+            'func': lg.graph_salary_by_experience
         },
         '8': {
             'name': 'Топ-10 самых высокооплачиваемых должностей',
-            'func': lg.plot_top_paying_jobs
+            'func': lg.graph_top_paying_jobs
 
         },
         '9': {
             'name': 'Динамика зарплат по годам',
-            'func': lg.plot_salary_trends_by_year
+            'func': lg.graph_salary_trends_by_year
         },
         '10': {
             'name': 'Выход',
@@ -57,7 +57,7 @@ def console_interface():
             if key == "9":
                 print("_"*10)
 
-        choice = input("Выберите действие (1-7): ").strip()
+        choice = input("Выберите действие (1-10): ").strip()
 
         if choice == '10':
             print("Выход...")
