@@ -5,6 +5,7 @@ import seaborn
 
 df_ships = pd.read_csv('files/Cleaned_ships_data.csv')
 df_iris = pd.read_csv('files/IRIS.csv')
+df_science_salary = pd.read_csv('files/Data_Science_Salary_2021_to_2023.csv')
 
 
 def plot_mean_dwt_vs_length():
@@ -66,7 +67,6 @@ def plot_2d_histogram():
     dwt_bins = np.linspace(df_ships['dwt'].min(), df_ships['dwt'].max(), 21)
 
     plt.figure(figsize=(12, 6))
-
     h = plt.hist2d(df_ships['built_year'], df_ships['dwt'],
                    bins=[30, dwt_bins],
                    cmap='viridis')
@@ -78,14 +78,14 @@ def plot_2d_histogram():
     plt.show()
 
 
-def plot_iris_pairplot_detailed():
+def plot_iris_pairplot():
 
     seaborn.pairplot(df_iris)
-    plt.suptitle('Парная диаграмма для датасета Iris', y=1.02)
+    plt.suptitle('Парная диаграмма для датасета Iris')
     plt.show()
 
 
-def plot_iris_violin_single():
+def plot_iris_violin():
 
     df_melted = df_iris.melt(id_vars='species',
                         value_vars=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'],
@@ -102,5 +102,54 @@ def plot_iris_violin_single():
     plt.xticks(rotation=45)
     plt.tight_layout()
     plt.show()
+
+
+def plot_salary_by_experience():
+    plt.figure(figsize=(12, 6))
+
+    seaborn.violinplot(data=df_science_salary, x='experience_level', y='salary_in_usd')
+
+    plt.title('Плотность распределения зарплат')
+    plt.xlabel('Уровень опыта')
+    plt.ylabel('Зарплата в USD')
+    plt.tick_params(axis='x', rotation=45)
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_top_paying_jobs():
+
+    top_jobs = df_science_salary.groupby('job_title')['salary_in_usd'].median().nlargest(10)
+
+    plt.figure(figsize=(12, 6))
+    bars = plt.barh(top_jobs.index, top_jobs.values)
+
+    for bar in bars:
+        width = bar.get_width()
+        plt.text(width, bar.get_y() + bar.get_height() / 2,
+                 f'${width:,.0f}', ha='left', va='center')
+
+    plt.xlabel('Медианная зарплата (USD)')
+    plt.title('Топ-10 самых высокооплачиваемых IT-должностей')
+    plt.gca().invert_yaxis()
+    plt.grid(axis='x', alpha=0.5)
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_salary_trends_by_year():
+
+    plt.figure(figsize=(12, 6))
+
+    seaborn.lineplot(data=df_science_salary, x='work_year', y='salary_in_usd',
+                 hue='experience_level', estimator='median',)
+
+    plt.title('Динамика медианных зарплат по годам и уровням опыта')
+    plt.xlabel('Год')
+    plt.ylabel('Зарплата в USD')
+    plt.legend(title='Уровень опыта')
+    plt.grid(True, alpha=0.3)
+    plt.show()
+
 
 
