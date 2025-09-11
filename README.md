@@ -38,7 +38,7 @@ project/
 ### Клонируйте репозиторий:
 
 ```bash
-git clone <URL репозитория>
+git clone https://github.com/Demonrux/APL_lab2
 cd project
 ```
 ### Установите необходимые зависимости:
