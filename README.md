@@ -25,23 +25,23 @@ project/
 - **`2-D график зависимости средней загрузки от длины`** - линейный график зависимости грузоподъемности от длины корабля
   <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/695954e4-5b30-47e2-972f-4794d8a7cf6d" />
 - **`Распределение кораблей по типам`** - круговая диаграмма типов кораблей
-  <img width="1242" height="748" alt="image" src="https://github.com/user-attachments/assets/994cb612-b6b2-470e-8cf7-1ee5a52e06c2" />
+  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/994cb612-b6b2-470e-8cf7-1ee5a52e06c2" />
 - **`Гистограмма по годам постройки`** - распределение кораблей по годам постройки
-  <img width="1493" height="739" alt="image" src="https://github.com/user-attachments/assets/7e6f8cb3-0c0c-43d8-bdfc-a2c846e22292" />
+  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/7e6f8cb3-0c0c-43d8-bdfc-a2c846e22292" />
 - **`2D гистограмма: годы постройки vs грузоподъемность`** - двумерная гистограмма
-  <img width="1420" height="736" alt="image" src="https://github.com/user-attachments/assets/735f400c-1d7a-4aab-8f53-810376fbf344" />
+  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/735f400c-1d7a-4aab-8f53-810376fbf344" />
 - **`Парная диаграмма для ирисов`** - pairplot для анализа взаимосвязей характеристик ирисов
-  <img width="1238" height="999" alt="image" src="https://github.com/user-attachments/assets/62e404a7-407d-4852-9da2-ad67d3b334a5" />
+  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/62e404a7-407d-4852-9da2-ad67d3b334a5" />
 - **`Скрипичные диаграммы для ирисов`** - violin plot для визуализации распределения характеристик по видам ирисов
-  <img width="1240" height="742" alt="image" src="https://github.com/user-attachments/assets/ea93843b-41e3-46ec-a168-70d1b9013cea" />
+  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/ea93843b-41e3-46ec-a168-70d1b9013cea" />
 
 ### Задание 2: Визуализация данных о зарплатах в Data Science:
 - **`Распределение зарплат по уровням опыта`** - violin plot зарплат по уровням опыта
-  <img width="1489" height="743" alt="image" src="https://github.com/user-attachments/assets/58fe8e84-bb0d-401b-8c34-846fe89d848d" />
+  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/58fe8e84-bb0d-401b-8c34-846fe89d848d" />
 - **`Топ-10 самых высокооплачиваемых должностей`** - горизонтальная столбчатая диаграмма
-  <img width="1490" height="742" alt="image" src="https://github.com/user-attachments/assets/42bae38e-d839-4683-84bf-eced245be3d9" />
+  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/42bae38e-d839-4683-84bf-eced245be3d9" />
 - **`Динамика зарплат по годам`** - линейные графики тенденций зарплат по годам
-  <img width="1488" height="747" alt="image" src="https://github.com/user-attachments/assets/3ccc6d61-59e0-4384-a4b6-b7cd9e9ebebd" />
+  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/3ccc6d61-59e0-4384-a4b6-b7cd9e9ebebd" />
 
   
 
